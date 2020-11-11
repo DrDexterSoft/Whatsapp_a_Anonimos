@@ -7,7 +7,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.drdextersoft.app.whatsappaanonimos"
+        applicationId "com.drdextersoft.app.ws2anonimous"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 4

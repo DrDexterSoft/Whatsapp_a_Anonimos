@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Whatsapp2Anonymous</string>
+    <string name="app_name">Ws2Anonymous</string>
     <string name="enviar_a">Send message to number:</string>
     <string name="enviara2">(including + and the country prefix)</string>
     <string name="enviar">Send!</string>
@@ -7,7 +7,7 @@
     <string name="Enviar">Send email</string>
     <string name="Salir">Close</string>
     <string name="about">About...</string>
-    <string name="titulo">Whatsapp2Anonymous</string>
+    <string name="titulo">Ws2Anonymous</string>
     <string name="descripcion">Send WhatsApp messages to numbers not saved on the phone</string>
 
 </resources>

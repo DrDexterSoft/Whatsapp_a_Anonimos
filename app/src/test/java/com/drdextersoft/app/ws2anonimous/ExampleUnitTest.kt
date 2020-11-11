@@ -1,4 +1,4 @@
-package com.drdextersoft.app.whatsappaanonimos
+package com.drdextersoft.app.ws2anonimous
 
 import org.junit.Test
 

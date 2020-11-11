@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Whatsapp a Anonimos"
+rootProject.name = "Ws2Anonimos"

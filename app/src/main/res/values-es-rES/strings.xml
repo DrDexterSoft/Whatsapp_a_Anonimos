@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Whatsapp2Anonymous</string>
+    <string name="app_name">Ws2Anonymous</string>
     <string name="enviar_a">Enviar mensaje al número:</string>
     <string name="enviara2">(incluyendo + y el prefijo de país)</string>
     <string name="enviar">Enviar!</string>
@@ -8,5 +8,5 @@
     <string name="Enviar">Enviar correo</string>
     <string name="Salir">Salir</string>
     <string name="about">Acerca de...</string>
-    <string name="titulo">Whatsapp2Anonymous</string>
+    <string name="titulo">Ws2Anonymous</string>
     <string name="descripcion">Envía mensajes de Whatsapp sin necesidad de registro previo en el teléfono</string></resources>
