@@ -1,21 +1,21 @@
 package com.drdextersoft.app.ws2anonimous
 
 import android.annotation.SuppressLint
-import android.content.*
-import android.content.Context.CLIPBOARD_SERVICE
+import android.content.ClipboardManager
+import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.telephony.TelephonyManager
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.MenuItem
 import android.view.WindowManager
-import android.webkit.MimeTypeMap
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.MimeTypeFilter
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.regex.Pattern
 
 var indice:String= ""
 
@@ -58,8 +58,7 @@ class MainActivity : AppCompatActivity() {
             if (tm.simCountryIso == paises[i]) {
                 Numero.setText("""+${codigos[i]}""")
                 indice=Numero.text.toString()
-            }
-        }
+            }}
 
         Numero.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {}
@@ -76,7 +75,6 @@ class MainActivity : AppCompatActivity() {
             }
           })
 
-
         Enviar.setOnClickListener {
             val linea: String = "https://api.whatsapp.com/send?phone=" + Numero.text
             val i = Intent(Intent.ACTION_VIEW)
@@ -89,17 +87,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(acercade)
         }
 
-
-
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
         Numero.requestFocus()
 
-        button2.setOnClickListener(){
-            var datos:ClipboardManager= getSystemService(android.content.Context.CLIPBOARD_SERVICE) as ClipboardManager
-            Numero.setText(datos.text)
+        button2.setOnClickListener {
+             val datos:ClipboardManager= getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+            val p:Pattern=Pattern.compile("[a-z]")
 
+            if  (p.matcher(datos.text).find().not()) {Numero.setText(datos.text)} else
+                Toast.makeText(this,"No es un número válido",Toast.LENGTH_SHORT).show()
         }
-
-
     }
 }
